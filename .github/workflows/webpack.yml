@@ -29,4 +29,4 @@ jobs:
             git pull origin main
             npm install --production
             sudo npm install -g pm2
-            pm2 restart all
+            sudo pm2 restart all
