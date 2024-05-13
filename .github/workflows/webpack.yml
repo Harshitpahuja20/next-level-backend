@@ -25,5 +25,5 @@ jobs:
             cd /var/www/html/next-level-backend
             git pull origin main
             npm install --production
-            npm install pm2@latest --save-dev
-            npx pm2 restart all
+            # npm install pm2@latest --save-dev
+            pm2 restart all
