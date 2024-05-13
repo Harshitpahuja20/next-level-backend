@@ -23,7 +23,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /var/www/html/next-level-backend
-            git pull origin main
-            npm install --production
+            git pull origin main 
+            npm install
             # npm install pm2@latest --save-dev
             pm2 restart all
