@@ -22,21 +22,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            # Install Node.js and npm
-            sudo apt-get update
-            sudo apt-get install -y nodejs npm
-
-            # Install PM2 globally
-            sudo npm install pm2@latest -g
-
-            # Navigate to project directory
             cd /var/www/html/next-level-backend
-
-            # Pull latest changes
             git pull origin main 
-
-            # Install project dependencies
             npm install
-            
-            # Restart the application using PM2
+            # npm install pm2@latest --save-dev
             pm2 restart all
