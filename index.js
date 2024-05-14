@@ -18,7 +18,7 @@ app.use(cors());
 require("./app/routes/auth.routes")(app)
 
 app.get("/", (req, res) => {
-  res.send("Welcome to Next Level Funding Server");
+  res.send("Swagat hain");
 });
 
 server.listen(PORT, () => {
